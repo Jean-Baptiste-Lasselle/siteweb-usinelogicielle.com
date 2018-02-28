@@ -1,0 +1,111 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import views.html._
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+@layout.layout(Messages("home.title"), None) {
+
+
+
+
+
+    <div class="romana_coures_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="romana_section_title">
+                        <h2>Our Courses</h2>
+                        <p>Connection declared vicinity more continue supplied announ</p>
+                    </div>
+                </div>
+                    <!-- Column End -->
+            </div>
+                <!-- Row End -->
+            <div class="row">
+                <div class="col-sm-4">
+                @widgets.single_course()
+                </div>
+                    <!-- Column End -->
+                <div class="col-sm-4">
+                @widgets.single_course()
+                </div>
+                    <!-- Column End -->
+                <div class="col-sm-4">
+                @widgets.single_course()
+                </div>
+                    <!-- Column End -->
+            </div>
+                <!-- Row End  -->
+        </div>
+    </div>
+
+
+    <div class="romana_cta2_area">
+        <div class="container">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h2>What your learning get started today?</h2>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="cta_btn">
+                                    <a href="contact.html" class="common_btn hvr-sweep-to-bottom">
+                                        contact now<i class="icofont icofont-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Column End  -->
+                </div>
+                    <!-- Row End  -->
+            </div>
+        </div>
+            <!-- Container End  -->
+    </div>
+
+
+    <div class="romana_teachers_area sp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="romana_section_title">
+                        <h2>Teachers of Educafe</h2>
+                        <p>Connection declared vicinity more continue supplied announ</p>
+                    </div>
+                </div>
+                    <!-- Column End -->
+            </div>
+                <!-- Row End -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                </div>
+                    <!-- Column End -->
+                <div class="col-md-3 col-sm-6">
+                @widgets.single_teacher()
+                </div>
+                    <!-- Column End -->
+                <div class="col-md-3 col-sm-6">
+                @widgets.single_teacher()
+                </div>
+                    <!-- Column End -->
+                <div class="col-md-3 col-sm-6">
+                </div>
+                    <!-- Column End -->
+            </div>
+                <!-- Row End  -->
+        </div>
+    </div>
+
+
+
+
+
+}
+
+

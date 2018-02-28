@@ -1,0 +1,68 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+<article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">
+    <div class="item-media">
+        <img src="images/courses/01.jpg" alt="">
+    </div>
+    <div class="item-content with_border color_border no_top_border bottom_rounded">
+        <header class="display-flex">
+            <div class="rightmargin_10">
+                <h4 class="entry-title bottommargin_10">
+                    Developing Mobile Apps
+                </h4>
+                <span class="small-text">Technology</span>
+            </div>
+            <div>
+                <p class="price-big highlight">
+                    <span class="amount oswald">$19</span>
+                    <span class="price-text">per week</span>
+                </p>
+            </div>
+        </header>
+    </div>
+    <div class="absolute-content">
+        <div class="cs bg_teaser after_cover color_bg_1 with_padding rounded" style="background-image: url(&quot;images /courses/ 01 . jpg&quot;);">
+            <img src="images/courses/01.jpg" alt="">
+            <header class="display-flex">
+                <div class="rightmargin_10">
+                    <h4 class="entry-title bottommargin_10">
+                        Developing Mobile Apps
+                    </h4>
+                    <span class="small-text">Technology</span>
+                </div>
+                <div>
+                    <p class="price-big">
+                        <span class="amount oswald">$19</span>
+                        <span class="price-text">per week</span>
+                    </p>
+                </div>
+            </header>
+            <div class="entry-content toppadding_30">
+                <div>
+                    <p>
+                        Sed sit amet pretium lorem. Curabitur sit amet eros sed nisl mattis interdum eu non urna. Suspendisse congue vel erat vel dictum.
+                    </p>
+                    <div class="media small-media">
+                        <div class="media-left media-middle">
+                            <img src="images/team/01_square.jpg" alt="" class="round">
+                        </div>
+                        <div class="media-body media-middle">
+                            <span class="small-text">Danny Tucker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-flex content-justify topmargin_10">
+                    <a href="#" class="theme_button color1 narrow_button rightmargin_10">Learn more</a>
+                    <a href="#" class="theme_button color1 narrow_button inverse">Buy now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,100 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import play.twirl.api.Html
+
+@(title: String, user: Option[models.User] = None)(content: Html)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>@title</title>
+        <meta charset="utf-8">
+            <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+            <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" type="image/png" href="@assets.path("/images/favicon.png")">
+        @*https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon*@
+
+
+        <link rel="stylesheet" href="@assets.path("styles/mainTemplate/bootstrap.min.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/mainTemplate/main.css")" id="color-switcher-link"/>
+        <link rel="stylesheet" href="@assets.path("styles/mainTemplate/animations.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/mainTemplate/fonts.css")"/>
+
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/style.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/common.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/animate.min.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/hover-min.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/icofont.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/magnific-popup.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/owl.carousel.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/responsive.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/common.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/secondaryTemplate/meanmenu.css")"/>
+
+        <link rel="stylesheet" href="@assets.path("styles/widgets/course/summary/goal.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/widgets/course/summary/title.css")"/>
+        <link rel="stylesheet" href="@assets.path("styles/widgets/course/summary/summary.css")"/>
+
+
+        <link rel="stylesheet" href="@assets.path("styles/courses.css")"/>
+
+        @*<script type="text/javascript" src="@assets.path("javascripts/vendor/modernizr-2.6.2.min.js")"></script>*@
+
+
+            <!-- TODO: see for new css https://codemyui.com/ -->
+            <!-- https://highlightjs.org/ -->
+        <link rel="stylesheet" href="@assets.path("styles/highlight.css")"/>
+        <script type="text/javascript" src="@assets.path("javascripts/highlight.pack.js")"></script>
+
+
+            <!--[if lt IE 9]>
+        <script type="text/javascript" src="@assets.path("javascripts/mainTemplate/vendor/html5shiv.min.js")">
+        </script>
+
+                <script type="text/javascript" src="@assets.path("javascripts/mainTemplate/vendor/respond.min.js")"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+        @views.html.layout.modal()
+        @views.html.layout.header()
+
+            <!--[if lt IE 9]><div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+        <div class="preloader">
+            <div class="preloader_image"></div>
+        </div>
+            <!--content-->
+
+        @content
+
+        @views.html.layout.footer()
+
+
+        <script type="text/javascript" src="@assets.path("javascripts/mainTemplate/compressed.js")"></script>
+        <script type="text/javascript" src="@assets.path("javascripts/mainTemplate/main.js")"></script>
+
+        <script type="text/javascript" src="@assets.path("javascripts/secondaryTemplate/active.js")"></script>
+        <script type="text/javascript" src="@assets.path("javascripts/secondaryTemplate/jquery.counterup.min.js")"></script>
+        <script type="text/javascript" src="@assets.path("javascripts/secondaryTemplate/jquery.magnific-popup.min.js")"></script>
+        <script type="text/javascript" src="@assets.path("javascripts/secondaryTemplate/jquery.meanmenu.js")"></script>
+        <script type="text/javascript" src="@assets.path("javascripts/secondaryTemplate/jquery.min.js")"></script>
+        <script type="text/javascript" src="@assets.path("javascripts/secondaryTemplate/owl.carousel.min.js")"></script>
+        <script type="text/javascript" src="@assets.path("javascripts/secondaryTemplate/waypoints.min.js")"></script>
+
+        <script type="text/javascript" src="@assets.path("javascripts/highlight-exe.js")"> </script>
+
+
+    </body>
+</html>

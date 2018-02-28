@@ -1,0 +1,94 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
+@import views.html.b3
+@import views.html.b3.inline.fieldConstructor
+@import views.html.helper
+@import views.html.main
+@import forms.ContactData
+@import play.api.i18n.Lang
+
+@import views.html._
+
+@(contactForm: Form[ContactData])(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+@layout.layout(Messages("home.title"), None) {
+
+    @*<section class="page_map" data-address="Terracina, LT, Italia">*@
+
+            @*<!-- marker description and marker icon goes here -->*@
+        @*<div class="map_marker_description">*@
+            @*<h3>Map Title</h3>*@
+            @*<p>Map description text</p>*@
+                @*<!-- <img class="map_marker_icon" src="images/map_marker_icon.png" alt=""> -->*@
+        @*</div>*@
+
+    @*</section>*@
+
+    <section class="ls section_padding_top_75 section_padding_bottom_100">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 to_animate" data-animation="pullDown">
+                    <div class="teaser text-center">
+                        <div class="teaser_icon highlight size_small">
+                            <i class="rt-icon2-phone5"></i>
+                        </div>
+
+                        <p>
+                            <span class="grey">Phone:</span> +12 345 678 9123<br>
+                            <span class="grey">Fax:</span> +12 345 678 9123
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-sm-4 to_animate" data-animation="pullDown">
+                    <div class="teaser text-center">
+                        <div class="teaser_icon highlight size_small">
+                            <i class="rt-icon2-location2"></i>
+                        </div>
+
+                        <p>
+                            PO Box 54378<br>
+                            4321 Your Address,<br>
+                            Your City, Your Country
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 to_animate" data-animation="pullDown">
+                    <div class="teaser text-center">
+                        <div class="teaser_icon highlight size_small">
+                            <i class="rt-icon2-world"></i>
+                        </div>
+
+                        <p>
+                            info@@ecourse.com<br>
+                            support@@ecourse.com
+                        </p>
+                        <p>
+                            <a href="#" class="social-icon color-icon soc-twitter"></a>
+                            <a href="#" class="social-icon color-icon soc-facebook"></a>
+                            <a href="#" class="social-icon color-icon soc-google"></a>
+                            <a href="#" class="social-icon color-icon soc-pinterest"></a>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row topmargin_60">
+                <div class="col-sm-12 to_animate">
+                    @views.html.formFields.contactUs(contactForm)
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+}

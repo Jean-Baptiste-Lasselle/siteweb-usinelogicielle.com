@@ -1,0 +1,28 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@import views.html._
+
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+
+
+<h3 class="widget-title">Course Progress</h3>
+
+<div class="romana_course_detail_area">
+    <div class="course_info">
+        <h2>Course Information</h2>
+        <ul>
+            <li>Start Date<span>22 - 08 - 17</span></li>
+            <li>class duration<span>78 hours</span></li>
+            <li>class size<span>240</span></li>
+            <li>Morning food<span>included</span></li>
+            <li>class staff<span>3 teachers</span></li>
+        </ul>
+    </div>
+</div>

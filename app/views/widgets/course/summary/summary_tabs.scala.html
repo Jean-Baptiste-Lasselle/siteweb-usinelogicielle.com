@@ -1,0 +1,22 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import models.widgets.course.summary.SummaryWidget
+
+@(summary: SummaryWidget)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+<!-- Nav tabs -->
+<ul class="nav" role="tablist">
+    @summary.parts.zipWithIndex.map { case ((title, call), index) =>
+    <li class="@if(summary.active.isDefined && summary.active.get == index) {active}">
+        <a href="@call">
+            <mark>Étape @(index + 1): </mark>
+            @title
+        </a>
+    </li>
+
+    }
+</ul>

@@ -1,0 +1,87 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import play.twirl.api.Html
+
+@import views.html._
+
+
+@(goals: List[String])(goalDescription: Html)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+
+<div class="romana_educating_area course_goal">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                @*
+                <div class="item-media entry-thumbnail rounded bottommargin_25">
+                <div class="embed-responsive embed-responsive-3by2 rounded ">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                </div>
+                *@
+
+                <div class="isotope_container isotope row masonry-layout columns_margin_bottom_20">
+                    <div class="isotope-item col-lg-12 col-md-12 col-sm-12 teachers">
+                        <article class="vertical-item content-padding post format-standard with_border color4_border rounded hover-scale-media">
+
+                            <div class="item-media top_rounded">
+                                <a href="#" target="_blank">
+                                    <img src="@assets.path("images/mainTemplate/images/slide01.jpg")" alt="">
+                                </a>
+
+                            </div>
+
+                            <div class="item-content">
+                                <header class="entry-header">
+                                    <h4 class="entry-title bottommargin_10">
+                                        <a href="" target="_blank">
+                                            Démo live
+                                        </a>
+                                    </h4>
+                                    <div class="small-text big categories-links greylinks">
+                                        <a href="" target="_blank">site.internet.fr</a>
+                                    </div>
+                                </header>
+                                <p>
+                                    Voici le résultat que vous aurez à la fin de ce tutoriel.
+                                </p>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+                <!-- Column End -->
+            <div class="col-sm-6">
+                <div class="row leftpadding_40">
+                    <h2>
+                        Le but du tutoriel
+                    </h2>
+                    <p class="topmargin_10 text-course">
+                        @goalDescription
+                    </p>
+                    <div class="about_list">
+                        @goals.zipWithIndex.map { case (text, index) =>
+                            @if(index % 2 == 0) {
+                                <div class="row">
+                                }
+                        <div class="col-sm-6">
+                            <a>@text</a>
+                        </div>
+                            @if(index % 2 == 1) { </div>}
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+                <!-- Column End -->
+        </div>
+            <!-- Row End  -->
+    </div>
+</div>

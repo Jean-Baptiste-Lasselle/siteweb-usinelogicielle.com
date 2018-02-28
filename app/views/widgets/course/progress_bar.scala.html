@@ -1,0 +1,17 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@(percentage: Double)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+<div class="widget widget_categories">
+
+    <h3 class="widget-title">Course Progress</h3>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" data-transitiongoal="@percentage" aria-valuenow="@percentage" style="width: @percentage%;">
+        </div>
+    </div>
+</div>

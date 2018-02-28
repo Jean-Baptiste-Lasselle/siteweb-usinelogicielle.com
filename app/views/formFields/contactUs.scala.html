@@ -1,0 +1,81 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
+@import views.html.b3
+@import views.html.b3.inline.fieldConstructor
+@import views.html.helper
+@import views.html.main
+@import forms.ContactData
+@import play.api.i18n.Lang
+
+@import views.html.helper
+@import utils.Helpers._
+
+@import forms.ContactData
+
+@(contactForm: Form[ContactData])(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+@helper.form(action = controllers.pages.routes.Contact.submit(), args = 'class -> "contact-form cs parallax", 'role -> "form", 'id -> "contactForm") {
+    @helper.CSRF.formField
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <!--
+            <p class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <i class="fa fa-user black" aria-hidden="true"></i>
+                <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
+            </p>
+            -->
+            <p class="form-group">
+                <label for="email">Email address<span class="required">*</span></label>
+                <i class="fa fa-envelope black" aria-hidden="true"></i>
+                @helper.inputText(contactForm("email"),
+                    args = 'class -> "form-control",
+                    'id -> "emailContact",
+                    'placeholder -> messages("form.enter-your-email"),
+                    'type -> "email")
+            </p>
+            <!--<p class="form-group">
+                <label for="subject">Subject<span class="required">*</span></label>
+                <i class="fa fa-flag black" aria-hidden="true"></i>
+                <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Subject">
+            </p>
+            -->
+        </div>
+        <div class="col-sm-6">
+
+            <p class="contact-form-message form-group">
+                <label for="message">Message</label>
+                <i class="fa fa-comment black" aria-hidden="true"></i>
+                @helper.textarea(contactForm("text"),
+                    args = 'class -> "form-control",
+                    'id -> "textContact",
+                    'placeholder -> messages("form.contactForm.enter-your-message"),
+                    'type -> "textarea",
+                    'rows -> 3,
+                    'cols -> 45)
+
+
+                @*<textarea aria-required="true" rows="3" cols="45" name="message" id="message" class="form-control" placeholder="Message"></textarea>*@
+            </p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="contact-form-submit text-center topmargin_30">
+                <button type="submit" class="theme_button">Send Message</button>
+            </p>
+        </div>
+    </div>
+
+
+}
+
+
+

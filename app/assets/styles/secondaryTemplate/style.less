@@ -1,0 +1,2567 @@
+@import "../utils/colors.less";
+
+
+
+/* =======================================================================
+Template Name:EduCafe html5 templete
+Author:  CrazyCafe
+Author URI:
+Version: 1.0
+coder name:Romana Nasrin
+Description: This Template is created for web template
+--------------------------------------------------------------------------
+
+*** Table Of Content ***
+
+** Home Page
+    =>Header_area CSS
+    =>CSS
+    =>CSS
+    =>CSS
+    =>CSS
+    =>CSS
+    =>CSS
+    =>CSS
+    =>CSS
+    =>CSS
+    =>CSS
+**Index-2 Page CSS
+**Index-3 Page CSS
+**Inner Page Common CSS
+**About Page CSS
+**Course Page CSS
+** Page CSS
+** Page CSS
+** Page CSS
+** Page CSS
+** Page CSS
+** Page CSS
+** Page CSS
+
+
+
+/* ------------------------------------------------
+    ***Base Css Start***
+------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+* {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:focus,
+input,
+textarea {
+  text-decoration: none;
+  outline: none;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 15px;
+}
+
+.alignright {
+  float: right;
+  margin-left: 15px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+P {
+  margin: 0px;
+  padding: 0px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ol, ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  color: #606060;
+  background: #fff;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------
+    ***Common Css Start***
+------------------------------------------------- */
+select {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+}
+
+.romana_section_title {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+.romana_section_title h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.sp {
+  padding: 100px 0px;
+}
+
+/* Common input Css*/
+.common_input input, select, textarea {
+  background: #f9f9f9;
+  border: 1px solid #e9e9e9;
+  height: 47px;
+  margin-bottom: 2px;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #5a5a5a;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 198px;
+  padding-top: 14px;
+  resize: none;
+}
+
+.common_input input:focus, select:focus, textarea:focus {
+  border: 1px solid #2fb6ba;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: inherit;
+  color: #222;
+  margin-bottom: 14px;
+}
+
+/* select option css */
+.select_option_one {
+  position: relative;
+  display: inline;
+}
+
+.select_option_one::after {
+  background: transparent;
+  color: #222222;
+  content: "\eb25";
+  cursor: pointer;
+  font-family: icofont;
+  font-size: 17px;
+  height: 54px;
+  line-height: 58px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -17px;
+  width: 50px;
+}
+
+option {
+  padding: 8px 20px;
+}
+
+/* comment-textarea-placeholder-color-change */
+
+.comment_form textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #606060;
+  opacity: 1;
+}
+
+.comment_form textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #606060;
+  opacity: 1;
+}
+
+.comment_form textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #606060;
+  opacity: 1;
+}
+
+.comment_form textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #606060;
+  opacity: 1;
+}
+
+.comment_form textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #606060;
+  opacity: 1;
+}
+
+/* contact-form-textarea-placeholder-color-change */
+
+.contact_form textarea::-webkit-input-placeholder, {
+  /* Chrome/Opera/Safari */
+  color: #ababab;
+  opacity: 1;
+}
+
+.contact_form textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ababab;
+  opacity: 1;
+}
+
+.contact_form textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ababab;
+  opacity: 1;
+}
+
+.contact_form textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ababab;
+  opacity: 1;
+}
+
+.contact_form textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ababab;
+  opacity: 1;
+}
+
+/* input-placeholder-color-change */
+
+.romana_login_form input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ababab;
+  opacity: 1;
+}
+
+.romana_login_form input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ababab;
+  opacity: 1;
+}
+
+.romana_login_form input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ababab;
+  opacity: 1;
+}
+
+.romana_login_form input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ababab;
+  opacity: 1;
+}
+
+/* ------------------------------------------------
+    ***Header_bottom_area Css Start***
+------------------------------------------------- */
+.romana_header_area {
+  position: relative;
+  z-index: 999;
+}
+
+.romana_logo {
+  margin: 15px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Mainmenu Css */
+  .main_menu li {
+    display: inline-block;
+    position: relative;
+  }
+
+  .main_menu li a {
+    color: #222;
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 30px 12px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 99;
+  }
+
+  .main_menu li:last-child a {
+    padding-right: 0px;
+  }
+
+  .main_menu > li:hover > a, .sub_menu > li:hover > a, .main_menu li.active a {
+    color: #1bb4b9;
+  }
+
+  ul.sub_menu {
+    background: #fff none repeat scroll 0 0;
+    border-top: 2px solid #1bb4b9;
+    opacity: 0;
+    position: absolute;
+    text-align: left;
+    top: 80px;
+    transform: rotateY(37deg) scale(1, 0.7);
+    visibility: hidden;
+    width: 183px;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .sub_menu > li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+
+  .sub_menu > li > a {
+    display: block;
+    line-height: normal;
+    margin: 0;
+    padding: 14px 25px;
+    font-size: 11px;
+  }
+
+  .sub_menu > li > a::before {
+    content: "\eb88 ";
+    font-family: icofont;
+    left: 0;
+    line-height: 44px;
+    opacity: 0;
+    padding-left: 5px;
+    position: absolute;
+    top: -1px;
+    visibility: hidden;
+  }
+
+  .sub_menu a:hover:before {
+    left: 5px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main_menu > li:hover ul.sub_menu {
+    opacity: 1;
+    transform: rotate(0deg);
+    visibility: visible;
+  }
+}
+
+/* end submenu*/
+.header_right {
+  padding: 19px 0;
+}
+
+.log_in {
+  color: #222;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 17px;
+  position: relative;
+}
+
+.log_in::after {
+  background: #1bb4b9;
+  border-radius: 50px;
+  bottom: -33px;
+  content: "";
+  height: 4px;
+  left: -2px;
+  position: absolute;
+  width: 44px;
+  opacity: 0;
+}
+
+.log_in:hover::after, .log_in:focus::after {
+  opacity: 1;
+}
+
+.header_right .common_btn {
+  padding: 11px 23px;
+}
+
+.romana_login_form.clicked {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.romana_login_form {
+  background: #fff none repeat scroll 0 0;
+  border: 3px solid #1bb4b9;
+  list-style: outside none none;
+  margin: 0;
+  opacity: 0;
+  padding: 36px 30px;
+  position: absolute;
+  right: 15px;
+  top: 80px;
+  transform: translateY(60px);
+  transition-duration: 0.4s;
+  visibility: hidden;
+  z-index: 999999;
+  border-radius: 3px;
+  width: 320px;
+}
+
+.romana_login_form input {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #e9e9e9;
+  border-radius: 3px;
+  color: #adadad;
+  height: 48px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.submit {
+  text-align: left;
+}
+
+.romana_login_form input[type="submit"] {
+  background: #222 none repeat scroll 0 0;
+  color: #fff;
+  margin-bottom: 0;
+  width: 90px;
+  height: 44px;
+  border: 0px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.romana_login_form input[type="submit"]:hover {
+  background: #1bb4b9;
+}
+
+.romana_login_form a {
+  color: #1bb4b9;
+  display: inline-block;
+  font-size: 14px;
+}
+
+/* mean menu CSS for Mobile Screen */
+
+.mean-container a.meanmenu-reveal span {
+  background-color: #fff;
+}
+
+.mean-container a.meanmenu-reveal {
+  color: #222222;
+  padding: 20px 18px;
+  position: absolute;
+  z-index: 2147483647;
+}
+
+.mean-container a.meanmenu-reveal span {
+  background-color: #222;
+}
+
+.mean-container .mean-bar {
+  background: transparent none repeat scroll 0 0;
+  display: inline-block;
+  height: 60px;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 2147483647;
+}
+
+.mean-container .mean-nav {
+  margin-top: 62px;
+}
+
+.mean-container .mean-nav ul li a.mean-expand {
+  line-height: 35px;
+  padding: 8px !important;
+  border: 0 !important;
+  z-index: 999999999999999 !important;
+}
+
+.mean-container .mean-nav ul li a {
+  color: #fff;
+  font-size: 12px;
+  opacity: 1;
+}
+
+.mean-container .mean-nav ul li a:hover {
+  color: #222;
+}
+
+.mean-container .mean-nav {
+  background: #1bb4b9 none repeat scroll 0 0;
+}
+
+.mean-container .mean-nav ul li a.mean-expand:hover {
+  background: #1bb4b9;
+}
+
+.mean-container .mean-bar {
+  background: #1bb4b9 none repeat scroll 0 0;
+  height: 61px;
+}
+
+.home2.mean-container .mean-nav {
+  background: #2b76ff none repeat scroll 0 0;
+}
+
+.home2.mean-container .mean-nav ul li a.mean-expand:hover {
+  background: #2b76ff;
+}
+
+.home2.mean-container .mean-bar {
+  background: #2b76ff none repeat scroll 0 0;
+}
+
+.home3.mean-container .mean-bar {
+  background: #fa7218 none repeat scroll 0 0;
+}
+
+.home3.mean-container .mean-nav {
+  background: #fa7218 none repeat scroll 0 0;
+}
+
+.home3.mean-container .mean-nav ul li a.mean-expand:hover {
+  background: #fa7218;
+}
+
+/* ------------------------------------------------
+    *** Hero_area Css Start***
+------------------------------------------------- */
+.hero_slider_bg1 {
+  background-image: url(../images/slider_bg.jpg);
+}
+
+.hero_slider_bg2 {
+  background-image: url(../images/slider_bg2.jpg);
+}
+
+.hero_slider_bg3 {
+  background-image: url(../images/slider_bg3.jpg);
+}
+
+.hero_slider2_bg1 {
+  background-image: url(../images/slider2_bg1.jpg);
+}
+
+.hero_slider3_bg1 {
+  background-image: url(../images/slider3_bg1.jpg);
+}
+
+.hero_slider_bg {
+  background-color: #ddd;
+  position: relative;
+  z-index: 1;
+  height: 670px;
+}
+
+.hero_slider_bg:after {
+  background-color: rgba(0, 0, 0, .6);
+  z-index: -1;
+}
+
+.hero_slider_bg .display_table_cell {
+  height: 670px;
+}
+
+.romana_hero_text {
+  text-align: left;
+  max-width: 440px;
+  color: #fff;
+  margin-left: 100px;
+}
+
+.romana_hero_text h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 17px;
+}
+
+.romana_hero_text .common_btn {
+  margin-top: 30px;
+  padding: 14px 36px;
+}
+
+/* ------------------------------------------------
+    *** Service_area Css Start***
+------------------------------------------------- */
+.single_service {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+  padding: 34px 30px 44px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.single_service:hover {
+  background-image: url(../images/service_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service_icon_container {
+  display: table;
+  height: 80px;
+  width: 100%;
+}
+
+.service_icon_tablecell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.single_service h3 {
+  margin: 20px 0;
+  text-transform: capitalize;
+}
+
+.single_service:hover h3 {
+  color: #1bb4b9;
+}
+
+/* ------------------------------------------------
+    *** Course_area Css Start***
+------------------------------------------------- */
+.romana_coures_area {
+  background: #f9f9f9 none repeat scroll 0 0;
+  padding-bottom: 100px;
+  padding-top: 92px;
+}
+
+.single_course_bg, .single_teacher_bg, .blog_bg, .single_college_bg {
+  height: 165px;
+  border-radius: 10px;
+}
+
+.single_course_bg1 {
+  background-image: url(../images/course_img1.jpg);
+}
+
+.single_course_bg2 {
+  background-image: url(../images/course_img2.jpg);
+}
+
+.single_course_bg3 {
+  background-image: url(../images/course_img3.jpg);
+}
+
+.single_course, .single_teacher {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+}
+
+.single_course h3 {
+  margin-bottom: 20px;
+  margin-top: 65px;
+  text-transform: inherit;
+}
+
+.date_round {
+  background: #1bb4b9 none repeat scroll 0 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  bottom: -32px;
+  display: block;
+  font-weight: 500;
+  height: 68px;
+  left: 50%;
+  line-height: 68px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 68px;
+  text-align: center;
+}
+
+.single_course:hover .date_round {
+  background: #222 none repeat scroll 0 0;
+}
+
+.date_round h4 {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.course_content {
+  padding: 0 15px 50px;
+  position: relative;
+}
+
+.course_content > a i {
+  background: #1bb4b9 none repeat scroll 0 0;
+  border-radius: 50%;
+  bottom: -30px;
+  color: #fff;
+  display: inline-block;
+  height: 44px;
+  left: 50%;
+  line-height: 44px;
+  position: absolute;
+  right: auto;
+  text-align: center;
+  top: auto;
+  transform: translateX(-50%);
+  width: 44px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  font-size: 17px;
+}
+
+.course_content > a i:hover {
+  background: #222;
+}
+
+.single_course:hover .course_content a i {
+  opacity: 1;
+  visibility: visible;
+  bottom: -14px;
+}
+
+/* ------------------------------------------------
+    *** Cta_area Css Start***
+------------------------------------------------- */
+.romana_cta_area, .romana_counter_area {
+  background-image: url(../images/cta_bg.jpg);
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 67px;
+  padding-bottom: 74px;
+  z-index: 1;
+}
+
+.romana_cta_area:after, .romana_counter_area:after {
+  background: rgba(0, 0, 0, .78);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.romana_cta_area h2 {
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.romana_cta_area .common_btn {
+  padding: 17px 27px;
+}
+
+/* ------------------------------------------------
+    *** Teachers_area Css Start***
+------------------------------------------------- */
+.single_teacher {
+  position: relative;
+}
+
+.single_teacher:hover .social_icons {
+  visibility: visible;
+}
+
+.single_teacher_bg {
+  height: 180px;
+  left: 50%;
+  margin-left: -90px;
+  top: -70px;
+  width: 180px;
+  margin-top: 80px;
+  transition: .4s;
+}
+
+.single_teacher:hover .single_teacher_bg {
+  top: -80px;
+}
+
+.single_teacher_bg1 {
+  background-image: url("../images/teacher_img1.jpg");
+}
+
+.single_teacher_bg2 {
+  background-image: url("../images/teacher_img2.jpg");
+}
+
+.single_teacher_bg3 {
+  background-image: url("../images/teacher_img3.jpg");
+}
+
+.single_teacher_bg4 {
+  background-image: url("../images/teacher_img4.jpg");
+}
+
+.teacher_title {
+  margin-top: -44px;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+.teacher_title h3 {
+  margin-bottom: 5px;
+  margin-top: 8px;
+}
+
+.social_icons {
+  background: #fff;
+  margin-top: 14px;
+  position: absolute;
+  top: -40px;
+  visibility: hidden;
+  width: 100%;
+}
+
+.social_icons > a {
+  color: #222;
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.social_icons > a:hover {
+  color: #1bb4b9;
+}
+
+/*
+.single_teacher:hover .social_icons a{
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+}
+*/
+/*
+.single_teacher:hover .teacher_title{
+    margin-top: -45px;
+    padding-bottom: 40px;
+}
+*/
+
+/* ------------------------------------------------
+    *** Counter_area Css Start***
+------------------------------------------------- */
+.romana_counter_area {
+  background-image: url(../images/counter_bg.jpg);
+  padding: 51px 0px;
+}
+
+.romana_counter_area:after {
+  background-color: rgba(27, 180, 185, .97);
+  border-radius: 10px;
+}
+
+.single_counter {
+  color: #fff;
+  float: left;
+  font-size: 15px;
+  font-weight: 400;
+  width: 20%;
+  padding-left: 15px;
+}
+
+.single_counter h2 {
+  color: #fff;
+  font-size: 38px;
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+  position: relative;
+}
+
+.single_counter h2::after {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 2px;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: auto;
+  width: 20px;
+}
+
+/* -------------------------------------------------
+    ***Testimonial_Area Start***
+-------------------------------------------------- */
+.single_testimonial_wrapper {
+  margin: 0;
+  padding: 8px 19px;
+}
+
+.testimonial_content {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 10px;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.15);
+  font-style: italic;
+  margin-top: -62px;
+  padding: 98px 20px 30px 36px;
+  position: relative;
+  text-transform: capitalize;
+  z-index: -1;
+}
+
+.testimonial_thumb {
+  padding-left: 30px;
+}
+
+.testimonial_thumb > img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+}
+
+.testimonial_title {
+  font-size: 13px;
+  font-style: normal;
+  margin-top: 26px;
+}
+
+.testimonial_title > h4 {
+  font-size: 17px;
+  margin-top: 3px;
+}
+
+.single_testimonial_wrapper:hover .testimonial_title {
+  color: #1bb4b9;
+}
+
+/* ------------------------------------------------
+    *** Blog_area Css Start***
+------------------------------------------------- */
+.romana_blog_area {
+  padding-bottom: 100px;
+}
+
+.blog_bg {
+  width: 200px;
+  height: 300px;
+  float: left;
+}
+
+.blog_bg1 {
+  background-image: url(../images/blog_img1.jpg);
+}
+
+.blog_bg2 {
+  background-image: url(../images/blog_img2.jpg);
+}
+
+.blog_content {
+  height: 300px;
+  line-height: 1.8;
+  padding: 34px 18px 30px 258px;
+}
+
+.blog_content > h4 {
+  line-height: 1.4;
+  margin-bottom: 19px;
+  margin-top: 14px;
+}
+
+.single_blog {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 10px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blog_meta {
+  display: inline-block;
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+.blog_meta i {
+  margin-right: 9px;
+}
+
+.blog_date {
+  background: #1bb4b9 none repeat scroll 0 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: block;
+  font-weight: 500;
+  height: 68px;
+  line-height: 68px;
+  width: 68px;
+  text-align: center;
+  bottom: auto;
+  left: auto;
+  position: absolute;
+  right: -30px;
+  top: 30px;
+}
+
+.blog_date h4 {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.single_blog:hover .blog_date {
+  background: #222 none repeat scroll 0 0;
+}
+
+.blog_content > a {
+  background: none repeat scroll 0 0 #222222;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 17px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  width: 44px;
+  margin-top: 10px;
+}
+
+.blog_content > a:hover {
+  background: #1bb4b9 none repeat scroll 0 0;
+}
+
+/* ------------------------------------------------
+    *** Footer_area Css Start***
+------------------------------------------------- */
+.romana_footer_area .romana_footer_top {
+  background: #222 none repeat scroll 0 0;
+  padding-bottom: 87px;
+  padding-top: 100px;
+  position: relative;
+}
+
+.romana_footer_area .footer_widget {
+  position: relative;
+  z-index: 9999;
+}
+
+.romana_footer_area .footer_widget a {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.romana_footer_area .footer_widget a,
+.romana_footer_area .footer_widget h4, .romana_footer_area .footer_widget {
+  color: #fff;
+}
+
+.romana_footer_area .footer_widget h4 {
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.romana_footer_area .footer_widget ul li a {
+  padding-bottom: 5px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.romana_footer_area .footer_widget ul li a:hover {
+  color: #1bb4b9;
+}
+
+.footer_widget.footer_address {
+  line-height: 2;
+}
+
+.romana_footer_bottom {
+  background: #303030;
+  color: #fff;
+  padding-top: 21px;
+  padding-bottom: 18px;
+}
+
+.romana_footer_bottom span {
+  color: #1bb4b9;
+}
+
+/* ------------------------------------------------
+    *** Index-2 Css Start***
+------------------------------------------------- */
+.home2 .common_btn, .home2 .blog_date, .home2 .blog_bg > a:hover, .home2 .log_in::after, .home2 .romana_login_form input[type="submit"]:hover {
+  background: #2572ff;
+}
+
+.home2 .romana_counter_area::after {
+  background-color: rgba(37, 114, 255, 0.97);
+}
+
+.home2 .single_testimonial_wrapper:hover .testimonial_title, .home2 .main_menu a:hover, .home2 .romana_footer_bottom span, .home2 .romana_footer_area .footer_widget ul li a:hover, .home2 .romana_login_form a {
+  color: #2572ff;
+}
+
+.home2 .romana_blog_area {
+  padding-top: 95px;
+}
+
+.home2 ul.sub_menu {
+  border-top: 2px solid #2572ff;
+}
+
+.home2 .romana_login_form {
+  border: 3px solid #2572ff;
+}
+
+.home2 .hero_slider_bg::after {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.home2 .romana_hero_text {
+  margin-left: 0;
+  max-width: 100%;
+  color: #585858;
+}
+
+.home2 .romana_hero_text h1 {
+  color: #585858;
+}
+
+.home2 .blog_content > a:hover {
+  background: #2572ff none repeat scroll 0 0;
+}
+
+/* student_forum area css*/
+.student_forum_area {
+  background: #f9f9f9 none repeat scroll 0 0;
+}
+
+.single_student_forum {
+  background: #222222 none repeat scroll 0 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.single_student_forum:hover {
+  background: #2572ff none repeat scroll 0 0;
+}
+
+.single_student_forum:hover .forum_content {
+  border: 1px solid #2572ff;
+}
+
+.forum_content {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #222;
+  border-radius: 10px;
+  float: right;
+  padding: 36px 30px;
+  width: 73%;
+}
+
+.forum_content > h3 {
+  margin-bottom: 20px;
+}
+
+.forum_icon {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25%;
+}
+
+.forum_icon > img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* collage_forum area css*/
+.romana_collage_area {
+  padding-bottom: 40px;
+  padding-top: 95px;
+}
+
+.single_college_bg1 {
+  background-image: url(../images/course_img6.jpg);
+}
+
+.single_college_bg2 {
+  background-image: url(../images/course_img2.jpg);
+}
+
+.single_college_bg3 {
+  background-image: url(../images/course_img3.jpg);
+}
+
+.single_college_bg4 {
+  background-image: url(../images/course_img4.jpg);
+}
+
+.single_college_bg5 {
+  background-image: url(../images/course_img1.jpg);
+}
+
+.single_college_bg6 {
+  background-image: url(../images/course_img5.jpg);
+}
+
+.single_college {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+  margin-bottom: 60px;
+}
+
+.single_college_bg::after {
+  background: rgba(34, 34, 34, .90);
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden
+}
+
+.college_content {
+  padding: 40px 35px;
+}
+
+.college_content h3 {
+  margin-bottom: 20px;
+}
+
+.college_link > a {
+  color: #fff;
+  font-size: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  opacity: 0;
+  visibility: hidden
+}
+
+.single_college:hover .college_link > a {
+  opacity: 1;
+  visibility: visible;
+}
+
+.single_college:hover .single_college_bg::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.m20 {
+  margin: 0px 10px;
+}
+
+/* ------------------------------------------------
+    *** Index-3 Css Start***
+------------------------------------------------- */
+.home3 .common_btn, .home3 .blog_date, .home3 .blog_bg > a:hover, .home3 .log_in::after, .home3 .romana_login_form input[type="submit"]:hover, .home3 .owl-nav div:hover {
+  background: #fd7114;
+}
+
+.home3 .romana_counter_area::after {
+  background-color: rgba(253, 113, 20, 0.97);
+  border-radius: 10px;
+}
+
+.home3 .single_testimonial_wrapper:hover .testimonial_title, .home3 .main_menu a:hover, .home3 .romana_footer_bottom span, .home3 .romana_footer_area .footer_widget ul li a:hover, .home3 .romana_login_form a {
+  color: #fd7114;
+}
+
+.home3 ul.sub_menu {
+  border-top: 2px solid #fd7114;
+}
+
+.home3 .romana_login_form {
+  border: 3px solid #fd7114;
+}
+
+/* romana_hero_area  */
+.home3 .romana_hero_text {
+  max-width: 490px;
+}
+
+.home3 .romana_hero_text h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+/* romana_service_area  */
+.home3 .single_service:hover {
+  background-image: url(../images/service_bg3.png);
+}
+
+.home3 .service_icon_container {
+  background: none repeat scroll 0 0 #fd7114;
+  border-radius: 50%;
+  display: table;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  width: 80px;
+}
+
+.home3 .blog_content > a:hover {
+  background: #fd7114 none repeat scroll 0 0;
+}
+
+.home3 .single_service:hover h3 {
+  color: #fd7114;
+}
+
+/* romana_educating_area  */
+.romana_educating_area {
+  padding-bottom: 100px;
+}
+
+.educating_img, .about_img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+}
+
+.educating_img {
+  background-image: url(../images/educating.jpg);
+  width: 570px;
+  height: 340px;
+}
+
+.educating_content > h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.educating_content {
+  padding: 60px 0 60px 84px;
+}
+
+/* cta3 area */
+.cta3_bg {
+  padding: 15px 0px;
+  border-radius: 10px;
+}
+
+.cta3_bg:after {
+  background: rgba(34, 34, 34, .89);
+  border-radius: 10px;
+}
+
+.cta3_bg h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 7px;
+  text-transform: none;
+}
+
+.cta_btn {
+  text-align: right;
+}
+
+.cta_btn .common_btn {
+  padding: 15px 37px;
+}
+
+/* counter area*/
+.home3 .romana_counter_area {
+  border-radius: 10px;
+}
+
+/* testimonial area*/
+.home3 .single_testimonial:hover .testimonial_thumb > img {
+  border: 2px solid #fd7114;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+}
+
+.home3 .testimonial_thumb > img {
+  border: 2px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0);
+}
+
+/* blog area */
+home3 .blog_content > a {
+  background: none repeat scroll 0 0 #fd7114;
+}
+
+home3 .blog_content > a:hover {
+  background: none repeat scroll 0 0 #222;
+}
+
+.blog3_bg1 {
+  background-image: url("../images/blog3_img1.jpg");
+}
+
+.blog3_bg2 {
+  background-image: url("../images/blog3_img2.jpg");
+}
+
+.educating_content {
+  padding: 60px 0 60px 84px;
+}
+
+.class_img {
+  width: 328px;
+  height: 165px;
+  border-radius: 10px;
+}
+
+.class_img1 {
+  background-image: url(../images/class_img1.jpg);
+}
+
+.class_img2 {
+  background-image: url(../images/class_img2.jpg);
+}
+
+.class_img3 {
+  background-image: url(../images/class_img3.jpg);
+}
+
+.single_class_wrapper {
+  margin: 0;
+  padding: 8px 16px;
+}
+
+.class_all_content {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  margin-top: -10px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.class_content {
+  padding: 45px 20px 32px;
+}
+
+.class_content h3 {
+  margin-bottom: 20px;
+}
+
+.class_bottom_content {
+  border: 1px solid #efefef;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+
+.left_class {
+  border-right: 1px solid #efefef;
+  float: left;
+  padding: 14px 0px;
+  text-align: center;
+  color: #222222;
+  font-size: 13px;
+  font-weight: 500;
+  background: #ffffff none repeat scroll 0 0;
+  width: 164px;
+}
+
+.single_class_wrapper:hover .left_class {
+  background: #222;
+  color: #fff;
+  border-right: 1px solid #222;
+}
+
+.single_class_wrapper:hover .right_class {
+  background: #fa7319;
+  color: #fff;
+}
+
+.single_class_wrapper:hover .right_class a {
+  color: #fff;
+}
+
+.right_class {
+  padding: 14px 0px;
+  text-align: center;
+  color: #222222;
+  font-size: 13px;
+  font-weight: 500;
+  background: #ffffff none repeat scroll 0 0;
+}
+
+.right_class a {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.class_bottom_content a i {
+  font-size: 17px;
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+
+/* counter area */
+.romana_counter3_area .romana_counter_area {
+  padding: 42px 0;
+}
+
+/* ------------------------------------------------
+    *** Inner pages common Css Start***
+------------------------------------------------- */
+.inner_page_hero_bg {
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.inner_page_hero_bg .display_table_cell {
+  height: 192px;
+}
+
+.inner_page_hero_bg .display_table {
+  margin: 0 auto;
+}
+
+.inner_page_hero_text {
+  text-align: center;
+}
+
+.inner_page_hero_text > h2 {
+  font-size: 27px;
+  text-transform: capitalize;
+}
+
+.breadcrumb {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  list-style: outside none none;
+  margin-bottom: 0;
+  margin-top: 11px;
+  padding: 0;
+  text-align: center;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb li a {
+  color: #222;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.breadcrumb > li.active a {
+  color: #1bb4b9;
+}
+
+.breadcrumb > li + li::before {
+  color: #222;
+  content: "- ";
+  padding: 0 3px;
+}
+
+/* ------------------------------------------------
+    *** About Page Css Start***
+------------------------------------------------- */
+.romana_about_area {
+  padding-bottom: 100px;
+}
+
+.about_img {
+  background-image: url(../images/about_img.jpg);
+  width: 500px;
+  height: 450px;
+}
+
+.about_content > h2 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.about_content {
+  padding: 56px 0 56px 10px;
+  line-height: 1.9;
+}
+
+.about_list {
+  margin-top: 36px;
+}
+
+.about_list a {
+  color: #222222;
+  display: block;
+  font-size: 17px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.about_list a::after {
+  background: #1bb4b9 none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "\f0f4";
+  font-family: icofont;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 22px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 22px;
+  color: #fff;
+}
+
+.romana_cta2_area {
+  background-image: url("../images/counter_bg.jpg");
+  padding: 30px 0;
+}
+
+.romana_cta2_area::after {
+  background-color: rgba(27, 180, 185, 0.97);
+}
+
+.romana_cta2_area .common_btn {
+  background-color: #222;
+}
+
+.romana_cta2_area h2 {
+  font-size: 34px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 6px;
+}
+
+.about .roman_testimonial_area {
+  padding-top: 0;
+}
+
+/* ------------------------------------------------
+    *** Course Page Css Start***
+------------------------------------------------- */
+.course .romana_coures_area {
+  padding-bottom: 30px;
+}
+
+.course .single_course {
+  margin-bottom: 70px;
+}
+
+.course .romana_about_area {
+  padding-top: 100px;
+}
+
+.single_course_bg4 {
+  background-image: url("../images/course_img7.jpg");
+}
+
+.single_course_bg5 {
+  background-image: url("../images/course_img8.jpg");
+}
+
+.single_course_bg6 {
+  background-image: url("../images/course_img9.jpg");
+}
+
+.mgp_image {
+  position: relative;
+  display: block;
+}
+
+.mgp_image:after {
+  background: rgba(34, 34, 34, .80);
+  border-radius: 10px;
+}
+
+.mgp_image span, .gallery_img span {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #1bb4b9;
+  height: 60px;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60px;
+  z-index: 9;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------
+    *** Teacher Page Css Start***
+------------------------------------------------- */
+.single_teacher_bg5 {
+  background-image: url("../images/teacher_img5.jpg");
+}
+
+.single_teacher_bg6 {
+  background-image: url("../images/teacher_img6.jpg");
+}
+
+.single_teacher_bg7 {
+  background-image: url("../images/teacher_img7.jpg");
+}
+
+.single_teacher_bg8 {
+  background-image: url("../images/teacher_img8.jpg");
+}
+
+.single_teacher_bg9 {
+  background-image: url("../images/teacher_img9.jpg");
+}
+
+.single_teacher_bg10 {
+  background-image: url("../images/teacher_img10.jpg");
+}
+
+.single_teacher_bg11 {
+  background-image: url("../images/teacher_img11.jpg");
+}
+
+.single_teacher_bg12 {
+  background-image: url("../images/teacher_img12.jpg");
+}
+
+.teacher .single_teacher {
+  margin-bottom: 65px;
+}
+
+.teacher .romana_teachers_area {
+  padding-bottom: 35px;
+  padding-top: 100px;
+}
+
+/* ------------------------------------------------
+    *** Teacher Page Css Start***
+------------------------------------------------- */
+.blog_bg3 {
+  background-image: url("../images/blog_img3.jpg");
+}
+
+.blog_bg4 {
+  background-image: url("../images/blog_img4.jpg");
+}
+
+.blog_bg5 {
+  background-image: url("../images/blog_img5.jpg");
+}
+
+.blog_bg6 {
+  background-image: url("../images/blog_img6.jpg");
+}
+
+.event .single_blog {
+  margin-top: 60px;
+}
+
+.event .romana_blog_area {
+  padding-top: 40px;
+}
+
+/* ------------------------------------------------
+    *** FAQ Page Css Start***
+------------------------------------------------- */
+.romana_faq_area {
+  padding-top: 95px;
+  padding-bottom: 45px;
+}
+
+.single_faq {
+  margin-bottom: 55px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.single_faq h3 {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.single_faq:hover h3 {
+  color: #1bb4b9;
+}
+
+.single_faq::after {
+  background: #1bb4b9 none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: 4px;
+  width: 10px;
+}
+
+/* ------------------------------------------------
+    *** Gallery Page Css Start***
+------------------------------------------------- */
+.gallery_img {
+  width: 100%;
+  height: 270px;
+  position: relative;
+  display: block;
+  border-radius: 10px;
+}
+
+.gallery_img:after {
+  background: rgba(34, 34, 34, .84);
+  border-radius: 10px;
+}
+
+.gallery_img span {
+  background: #1bb4b9 none repeat scroll 0 0;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.single_gallery {
+  color: #606060;
+  font-size: 13px;
+  margin-bottom: 43px;
+}
+
+.single_gallery:hover .gallery_img span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.single_gallery h3 {
+  margin-top: 27px;
+  margin-bottom: 7px;
+}
+
+.gallery_img1 {
+  background-image: url(../images/gallery_img1.jpg);
+}
+
+.gallery_img2 {
+  background-image: url(../images/gallery_img2.jpg);
+}
+
+.gallery_img3 {
+  background-image: url(../images/gallery_img3.jpg);
+}
+
+.gallery_img4 {
+  background-image: url(../images/gallery_img4.jpg);
+}
+
+.gallery_img5 {
+  background-image: url(../images/gallery_img5.jpg);
+}
+
+.gallery_img6 {
+  background-image: url(../images/gallery_img6.jpg);
+}
+
+.load_more_btn .common_btn {
+  padding: 16px 40px;
+  margin-top: 20px;
+}
+
+/* ------------------------------------------------
+    *** 404 Page Css Start***
+------------------------------------------------- */
+.romana_error_area {
+  padding-bottom: 152px;
+  padding-top: 152px;
+}
+
+.error_img {
+  text-align: center;
+}
+
+.error_text {
+  padding-right: 105px;
+}
+
+.error_text h1 {
+  font-size: 110px;
+  font-weight: 700;
+  color: #1bb4b9;
+}
+
+.error_text h2 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  margin-top: 12px;
+}
+
+.error_text h2 span {
+  font-weight: 500;
+}
+
+.error_text .common_btn {
+  padding: 16px 40px;
+  margin-top: 33px;
+}
+
+/* ------------------------------------------------
+    *** Course Detail  Page Css Start***
+------------------------------------------------- */
+.course_detail_img {
+  background-image: url(../images/course_detail_img.jpg);
+  height: 480px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+
+.romana_course_detail_area h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.romana_course_detail_area p {
+  margin-top: 30px;
+}
+
+.course_des {
+  margin-top: 50px;
+}
+
+.tp_apply {
+  margin-top: 52px;
+}
+
+.course_info {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 10px;
+  margin-left: 40px;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+}
+
+.course_info > h2 {
+  background: #1bb4b9 none repeat scroll 0 0;
+  border-radius: 7px;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.course_info > ul {
+  padding: 41px 40px;
+}
+
+.course_info li {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 7px 0;
+  text-transform: capitalize;
+}
+
+.course_info span {
+  color: #606060;
+  float: right;
+  font-size: 14px;
+  font-weight: 300;
+  width: 123px;
+  position: relative;
+  text-align: right;
+}
+
+.course_info span:after {
+  color: #222222;
+  content: ":";
+  font-weight: 500;
+  left: -115px;
+  right: auto;
+  z-index: 9;
+}
+
+.tp_apply .common_btn {
+  padding: 16px;
+  margin-top: 33px;
+  width: 170px;
+  text-align: center;
+}
+
+.tp_apply .course_detail_btn {
+  background: #222;
+  margin-left: 16px;
+}
+
+/* ------------------------------------------------
+    *** Testimonial  Page Css Start***
+------------------------------------------------- */
+.romana_testimonial_area {
+  padding-bottom: 35px;
+  padding-top: 93px;
+}
+
+.testimonial .single_testimonial_wrapper {
+  margin: 0 0 56px;
+}
+
+/* ------------------------------------------------
+    *** Event_detail  Page Css Start***
+------------------------------------------------- */
+.event_detail_img {
+  background-image: url(../images/event_detail_img.jpg);
+}
+
+.event_detail .course_info {
+  margin-left: 0px;
+  padding-bottom: 10px;
+}
+
+.course_info .common_btn {
+  padding: 15px 29px;
+}
+
+.course_info img {
+  float: right;
+  margin-top: 13px;
+}
+
+.course_info hr {
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.romana_brand_crsl {
+  margin-top: 80px;
+}
+
+.romana_single_brand {
+  border: 1px solid #c8e3e4;
+  border-radius: 5px;
+  height: 88px;
+  line-height: 133px;
+  position: relative;
+  text-align: center;
+  width: 160px;
+}
+
+.romana_single_brand > a {
+  display: inline-block;
+}
+
+#googleMap {
+  height: 354px;
+  margin-left: 30px;
+  border-radius: 5px;
+  box-shadow: -2px 3px 11px rgba(0, 1, 1, 0.1);
+}
+
+.course_info.course_info2 {
+  padding: 41px 40px;
+}
+
+.event_detail .course_info > ul {
+  padding: 0;
+}
+
+/* ------------------------------------------------
+    *** Blog  Page Css Start***
+------------------------------------------------- */
+.romana_blog_img {
+  border-radius: 10px;
+  height: 340px;
+  width: 100%;
+}
+
+.romana_blog_img1 {
+  background-image: url(../images/blog_page_img1.jpg);
+}
+
+.romana_blog_img2 {
+  background-image: url(../images/blog_page_img2.jpg);
+}
+
+.romana_blog_img3 {
+  background-image: url(../images/blog_page_img3.jpg);
+}
+
+.romana_blog_text h2 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  margin-top: 36px;
+  text-transform: inherit;
+}
+
+.romana_blog_text > h4 {
+  color: #606060;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 21px;
+}
+
+.read_more_btn {
+  color: #222222;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.read_more_btn i {
+  font-size: 15px;
+  margin-left: 6px;
+}
+
+.romana_blog_text > a:hover {
+  color: #1bb4b9;
+}
+
+.romana_blog_content {
+  margin-bottom: 52px;
+}
+
+.romana_blog_pagination li {
+  display: inline-block;
+}
+
+.romana_blog_pagination li a {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  color: #222222;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 38px;
+  line-height: 38px;
+  margin: 0 2px;
+  padding: 0 10px;
+  text-align: center;
+  transition-duration: 0.3s;
+  width: 38px;
+}
+
+.romana_blog_pagination li a i {
+  font-size: 15px;
+}
+
+.romana_blog_pagination li a:hover {
+  color: #fff;
+  background: #1bb4b9;
+  border: 1px solid #1bb4b9;
+}
+
+.romana_all_blog_content hr {
+  margin-bottom: 40px;
+  margin-top: -20px;
+}
+
+/******** aside css  *********/
+aside {
+  padding-left: 70px;
+}
+
+aside .widget h3 {
+  font-size: 20px;
+  margin-bottom: 35px;
+  text-transform: capitalize;
+}
+
+.widget {
+  margin-bottom: 60px;
+}
+
+/* search widget */
+.widget.search_widget {
+  position: relative;
+}
+
+.widget.search_widget input {
+  background: #fff none repeat scroll 0 0;
+  border: medium none;
+  display: inline-block;
+  height: 52px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+  border-radius: 5px;
+}
+
+.widget.search_widget a {
+  background: #1bb4b9 none repeat scroll 0 0;
+  border-radius: 3px;
+  height: 100%;
+  line-height: 52px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 52px;
+  color: #fff;
+}
+
+/* category */
+.widget.widget_category {
+  background: #fff none repeat scroll 0 0;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+}
+
+.widget.widget_category a {
+  color: #606060;
+  display: block;
+  font-size: 14px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.widget.widget_category a:after {
+  z-index: 9;
+  content: "\eb55";
+  font-family: icofont;
+  top: 1px;
+}
+
+.widget.widget_category a:hover {
+  color: #1bb4b9;
+}
+
+.widget.widget_category a:hover i {
+  color: #1bb4b9;
+}
+
+/* related post */
+.related_post {
+  box-shadow: 0 4px 8px rgba(0, 1, 1, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 40px 30px 18px 40px;
+}
+
+.single_related_post {
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.single_related_post > h4 {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* ------------------------------------------------
+    *** Blog-Detail  Page Css Start***
+------------------------------------------------- */
+.blog_detail_content p {
+  margin-bottom: 30px;
+  line-height: 1.9;
+}
+
+.blog_detail_content .span-italic {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border-radius: 5px;
+  font-style: italic;
+  padding: 45px 40px;
+}
+
+.tag_social_icon {
+  margin-top: 36px;
+  overflow: hidden;
+  margin-bottom: -20px;
+}
+
+.tag {
+  float: left;
+}
+
+.tag b {
+  color: #222;
+  font-weight: 500;
+}
+
+.tag span {
+  color: #1bb4b9;
+}
+
+.social_icon {
+  float: right;
+}
+
+.social_icon > a i {
+  background-color: transparent;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 6px;
+  text-align: center;
+  width: 30px;
+}
+
+.social_icon > a .icofont-social-facebook {
+  background-color: #1679c6;
+}
+
+.social_icon > a .icofont-social-skype {
+  background-color: #00abea;
+}
+
+.social_icon > a .icofont-social-google-plus {
+  background-color: #ea3d00;
+}
+
+.single_comment {
+  overflow: hidden;
+}
+
+.comment_img {
+  display: block;
+  float: left;
+}
+
+.comment_img > img {
+  border-radius: 50%;
+}
+
+.comment_text {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border-radius: 5px;
+  margin-bottom: 33px;
+  margin-left: 104px;
+  padding: 40px 32px 2px;
+  position: relative;
+}
+
+.comment_form textarea {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  margin-bottom: 33px;
+  margin-left: 20px;
+  width: 645px;
+  height: 208px;
+}
+
+.comment_form .common_btn {
+  border: medium none;
+  margin-left: 105px;
+  padding: 16px 37px;
+}
+
+.comment_text > h3 {
+  font-size: 16px;
+}
+
+.comment_text > h4 {
+  color: #606060;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 7px;
+}
+
+.comment_text > a {
+  color: #1bb4b9;
+  font-size: 15px;
+  font-weight: 500;
+  position: absolute;
+  right: 5%;
+  top: 40px;
+}
+
+.icofont.icofont-reply {
+  margin-right: 5px;
+}
+
+/* ------------------------------------------------
+    *** Registration  Page Css Start***
+------------------------------------------------- */
+.condition_img_bg {
+  background-image: url(../images/condition_img.jpg);
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 45px;
+}
+
+.condition_list li {
+  padding-bottom: 20px;
+  padding-left: 33px;
+  position: relative;
+}
+
+.condition_list li::after {
+  content: "\f0f4";
+  font-family: icofont;
+  left: 0;
+  position: absolute;
+  top: 0;
+  color: #1bb4b9;
+}
+
+.registration_form textarea {
+  height: 100px;
+}
+
+/* ------------------------------------------------
+    *** Contact  Page Css Start***
+------------------------------------------------- */
+.romana_contact_area {
+  padding-top: 95px;
+}
+
+.contact_form h3, .contact_info h3 {
+  font-size: 22px;
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.contact_form h3:after, .contact_info h3:after {
+  background: #1bb4b9;
+  z-index: 9;
+  height: 3px;
+  width: 66px;
+  bottom: 0;
+  top: auto;
+}
+
+.contact_form .common_btn {
+  border: medium none;
+  padding: 16px 37px;
+  margin-top: 12px;
+}
+
+.contact_info {
+  padding-left: 35px;
+}
+
+#googleMap2 {
+  height: 252px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  box-shadow: -2px 3px 11px rgba(0, 1, 1, 0.1);
+}
+
+.single_info b {
+  float: left;
+  font-weight: 500;
+  color: #222;
+}
+
+.single_info span {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.single_info a {
+  color: #606060;
+}
+
+.single_info {
+  margin-bottom: 45px;
+}
+
+.contact_form.common_input {
+  padding-bottom: 100px;
+}
+
+/* ==============================================================================================
+    ************** Preloder Css start ******************
+================================================================================================= */
+body.preloader_active {
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 99999999999;
+}
+
+.preloader_spinner {
+  background: transparent url("../images/load.gif") no-repeat scroll center center;
+  display: block;
+  height: 120px;
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -60px;
+  position: absolute;
+  top: 50%;
+  width: 142px;
+  z-index: 2147483647;
+}

@@ -1,0 +1,138 @@
+/* For background image */
+.hero_slider_bg, .single_college_bg, .single_course_bg, .single_teacher_bg, .blog_bg, .educating_img, .cta3_bg, .about_img, .class_img, .romana_cta2_area, .gallery_img, .romana_blog_img, .condition_img_bg{
+    background-color: #ddd;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+/* For before/after */
+.hero_slider_bg:after, .single_college_bg:after, .cta3_bg:after, .romana_cta2_area:after, .gallery_img:after, .mgp_image:after, .course_info span:after, .widget.widget_category a:after, .contact_form h3:after, .contact_info h3:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom:auto;
+    right: auto;
+    z-index: -1;
+}
+/* For Transition */
+.search, .main_menu li a, ul.sub_menu, .sub_menu > li > a::before, .owl-nav div, .owl-dots div, .date_round, .course_content > a i, .single_service, .social_icons a, .testimonial_title, .romana_footer_area .footer_widget ul li a, .log_in::after, .teacher_title h3, .blog_date, .blog_bg > a, .romana_login_form input[type="submit"], .college_link > a, .single_college_bg::after, .single_student_forum, .forum_content, .social_icons, .blog_content > a, .left_class, .right_class, .right_class a, .roman_testimonial_area, .owl-nav, .single_faq h3, .gallery_img span, .romana_blog_text > a, .widget.widget_category a, .widget.widget_category a i, .single_service h3{
+    -webkit-transition-duration: .5s; 
+    -moz-transition-duration: .5s; 
+    -o-transition-duration: .5s; 
+    transition-duration: .5s;
+}
+/* For Display table */
+.display_table {
+    display: table;
+    height: 100%;
+}
+.display_table_cell {
+    display: table-cell;
+    height: 0px;
+    vertical-align: middle;
+}
+/* For Common Button */
+.common_btn{
+    background: #1bb4b9 none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.common_btn i{
+    position: relative;
+    top:1px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+/* For Common hover effect */
+.hvr-sweep-to-bottom::before {
+    background: #21a9ad none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.home2 .hvr-sweep-to-bottom::before {
+    background: #2866d7 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.home3 .hvr-sweep-to-bottom::before {
+    background: #ee6d17 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.romana_cta2_area .hvr-sweep-to-bottom::before, .tp_apply .course_detail_btn.hvr-sweep-to-bottom:before {
+    background: #161515 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.romana_cta2_area .hvr-sweep-to-bottom::before{
+    background: #000 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+/* For Owl-img */
+.owl-carousel .owl-item img {
+    width: auto;
+}
+/* For Owl-Nav */
+.owl-nav div {
+    background: #686868;
+    color: #fff;
+    font-size: 19px;
+    height: 38px;
+    left: 50px;
+    line-height: 38px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 38px;
+    transform: translateY(-50%);
+    border-radius: 4px;
+}
+.owl-nav div:hover{
+    background: #1bb4b9 none repeat scroll 0 0;
+}
+.owl-nav div.owl-next {
+    left: auto;
+    right: 50px;
+}
+/* romana_popular_class_crsl nav css */
+.roman_class_area .owl-nav{
+    visibility: hidden;
+    opacity: 0;
+}
+.roman_class_area:hover .romana_popular_class_crsl .owl-nav{
+    visibility: visible;
+    opacity: 1;
+}
+.romana_popular_class_crsl .owl-nav div{
+    left: -106px;
+}
+.romana_popular_class_crsl .owl-nav div.owl-next {
+  left: auto;
+  right: -106px;
+}
+.mr30{
+    margin-right: 30px;
+}
+.mlr15{
+    margin: 0px 15px;
+}
+.ml30{
+    margin-left: 30px;
+}
+.sp95{
+    padding: 95px 0px;
+}
+.mr22{
+    margin-right: 20px;
+}
+.ml22{
+    margin-left: 20px;
+}
+.mlr10{
+    margin: 0px 10px;
+}

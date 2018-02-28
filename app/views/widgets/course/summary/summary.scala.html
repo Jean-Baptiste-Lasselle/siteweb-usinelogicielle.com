@@ -1,0 +1,52 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import play.api.mvc.Call
+@import views.html._
+@import models.widgets.course.summary.SummaryWidget
+
+@(summary: SummaryWidget, aside: Boolean = false)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+
+@if(aside) {
+    <div class="container summary aside">
+        @*<div class="row">*@
+            @*<div class="col-md-12">*@
+                @*<div class="romana_section_title">*@
+                    @*<h2>Sommaire</h2>*@
+                    @*<p></p>*@
+                @*</div>*@
+            @*</div>*@
+                @*<!-- Column End -->*@
+        @*</div>*@
+
+        <div class="row vertical-tabs">
+
+        @widgets.course.summary.summary_tabs(summary)
+
+        </div>
+    </div>
+} else {
+    <div class="container summary">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="romana_section_title">
+                    <h1>Sommaire</h1>
+                    <p></p>
+                </div>
+            </div>
+                <!-- Column End -->
+        </div>
+
+        <div class="row vertical-tabs">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+            @widgets.course.summary.summary_tabs(summary)
+            </div>
+
+        </div>
+    </div>
+}

@@ -1,0 +1,132 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import play.api.mvc.Call
+@import views.html._
+@import models.widgets.course.summary.SummaryWidget
+
+@(summary: SummaryWidget)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+
+
+
+
+@layout.layout(Messages("home.title"), None) {
+
+    <div class="ls topmargin_60">
+    @widgets.course.summary.title()
+    </div>
+
+
+    <div class="ls topmargin_90">
+
+        @widgets.course.summary.goal(List("Connection", "Activation du compte",
+            "Connection via Facebook", "Changer du mot de passe",
+            "Connection via Google+", "Mot de passe oublié",
+            "Inscription", "Base de donner SQL",
+            "Inscription via Facebook", "Serveur mail",
+            "Inscription via Google+", "Protection CSRF",
+            "Se souvenir de moi", "Security Headers")){
+
+            Dans ce tutoriel, nous allons installer, construire et mettre en ligne un site internet avec
+            <a href="https://www.playframework.com/" target="_blank">Play Framework - Scala.</a>
+            <br>
+            Notre site internet aura pour fonctionnalités:
+        }
+    </div>
+
+    <section class="ls topmargin_90">
+    @widgets.course.summary.summary(summary)
+    </section>
+
+
+    <div class="romana_cta2_area topmargin_90">
+        <div class="container">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h2> Veux-tu apprendre de façon simple et guidée? </h2>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="cta_btn">
+                                    <a href="contact.html" class="common_btn hvr-sweep-to-bottom">
+                                        C'est parti!
+                                        <i class="icofont icofont-long-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Column End  -->
+                </div>
+                    <!-- Row End  -->
+            </div>
+        </div>
+            <!-- Container End  -->
+    </div>
+
+
+    <div class="student_forum_area sp">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="single_student_forum">
+                        <div class="forum_icon">
+                            <img src="" alt="">
+                        </div>
+                        <div class="forum_content">
+                            <h3>Utilisateur Linux</h3>
+                            <p>
+                                J'ai réalisé de tutoriel avec une machine virtuelle Ubuntu 14.
+                                Tout devrait donc se dérouler parfaitement pour vous!
+                            </p>
+                        </div>
+                    </div>
+                        <!-- Single Service End -->
+                </div>
+                    <!-- Column End -->
+                <div class="col-sm-4">
+                    <div class="single_student_forum">
+                        <div class="forum_icon">
+                            <img src="" alt="">
+                        </div>
+                        <div class="forum_content">
+                            <h3>Utilisateur Mac</h3>
+                            <p>
+                                J'ai tester les manipulation que l'on va faire sur mon mac perso.
+                                Tout devrait donc se dérouler parfaitement pour vous!
+                            </p>
+                        </div>
+                    </div>
+                        <!-- Single Service End -->
+                </div>
+                    <!-- Column End -->
+                <div class="col-sm-4">
+                    <div class="single_student_forum">
+                        <div class="forum_icon">
+                            <img src="" alt="">
+                        </div>
+                        <div class="forum_content">
+                            <h3>Utilisateur Windows</h3>
+                            <p>
+                                Comment dire? Je n'ai jamais travaillé avec Windows de ma vie?
+                                Donc... Voilà voilà.
+                            </p>
+                        </div>
+                    </div>
+                        <!-- Single Service End -->
+                </div>
+                    <!-- Column End -->
+            </div>
+                <!-- Row End  -->
+        </div>
+            <!-- Container End  -->
+    </div>
+}
+
+

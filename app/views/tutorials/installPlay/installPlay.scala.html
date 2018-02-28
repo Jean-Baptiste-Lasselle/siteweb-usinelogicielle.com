@@ -1,0 +1,72 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@import views.html._
+
+@import models.widgets.course.summary.SummaryWidget
+
+@(summary: SummaryWidget)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+    @layout.layout(Messages("home.title"), None) {
+
+
+        <section class="ls section_padding_top_100 section_padding_bottom_100">
+            <div class="container">
+
+                @widgets.course.summary.title()
+
+                <div class="topmargin_90">
+
+                    <div class="row">
+
+                        <div class="col-sm-7 col-md-8 col-lg-8 col-sm-push-5 col-md-push-4 col-lg-push-4">
+                        @tutorials.installPlay.main()
+
+                        </div>
+                            <!--eof .col-sm-8 (main content)-->
+
+                            <!-- sidebar -->
+                        <aside class="col-sm-5 col-md-4 col-lg-4 col-sm-pull-7 col-md-pull-8 col-lg-pull-8">
+                        @tutorials.installPlay.sidebar(summary)
+                        </aside>
+                            <!-- eof aside sidebar -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="romana_cta2_area">
+            <div class="container">
+                <div class="">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <h2>
+                                        Des questions?   Des remarques?
+                                    </h2>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="cta_btn">
+                                        <a href="contact.html" class="common_btn hvr-sweep-to-bottom">
+                                            contact now<i class="icofont icofont-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <!-- Column End  -->
+                    </div>
+                        <!-- Row End  -->
+                </div>
+            </div>
+                <!-- Container End  -->
+        </div>
+
+    }
+
+

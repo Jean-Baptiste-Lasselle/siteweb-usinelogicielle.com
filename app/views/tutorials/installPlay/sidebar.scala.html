@@ -1,0 +1,34 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import views.html._
+
+@import models.widgets.course.summary.SummaryWidget
+@(summary: SummaryWidget)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+@widgets.course.summary.summary(summary, true)
+
+
+
+
+<section class="ls section_padding_top_50">
+    <div class="container">
+    @widgets.course.progress_bar(20.5)
+    </div>
+</section>
+
+@*<section class="ls section_padding_top_50">*@
+    @*<div class="container">*@
+    @*@widgets.course.summary_instructions()*@
+    @*</div>*@
+@*</section>*@
+
+
+
+
+
+
+

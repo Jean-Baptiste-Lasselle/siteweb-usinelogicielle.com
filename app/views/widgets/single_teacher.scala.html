@@ -1,0 +1,27 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+<div class="single_teacher text-center">
+    <a href="teacher.html">
+        <div class="single_teacher_bg single_teacher_bg1"></div>
+    </a>
+    <div class="teacher_title">
+        <div class="social_icons">
+            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
+            <a href="#"><i class="icofont icofont-social-twitter"></i></a>
+            <a href="#"><i class="icofont icofont-social-skype"></i></a>
+            <a href="#"><i class="icofont icofont-social-google-plus"></i></a>
+        </div>
+        <div class="title">
+            <a href="teacher.html">
+                <h3>Marsha Barker</h3>
+            </a>
+            <p>Vice Chairman</p>
+        </div>
+    </div>
+</div>
+

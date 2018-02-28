@@ -1,0 +1,240 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import views.html._
+@import enums.ProgLang._
+@import enums.OS._
+@import play.twirl.api.Html
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+
+
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="course_part_title">
+                    <h2> Installer Play Framework</h2>
+                </div>
+            </div>
+                <!-- column end -->
+        </div>
+    </div>
+</section>
+
+
+
+<article class="single-post vertical-item post">
+    <div class="item-content">
+        <header class="entry-header text-course">
+            <p class="text-course">
+                L'installation de sbt se fait en deux temps
+            </p>
+
+            <div class="inline-block">
+                <ul class="list2 small-highlight leftmargin_30">
+                    <li>Installer Java <span class="light">
+                        (du moins vérifier que la JDK 1.8 est bien installée)</span></li>
+                    <li>Installer Sbt</li>
+
+                </ul>
+            </div>
+            <p>
+                Alors c'est partie!
+            </p>
+        </header>
+    </div>
+</article>
+
+
+
+
+<article class="single-post vertical-item post">
+    <div class="item-content">
+        <header class="entry-header">
+
+            <h1 class="entry-title topmargin_0">
+                Installer Java
+            </h1>
+
+            @*<p class="entry-meta small-text inline-content">*@
+            @*<span>*@
+            @*<a href="#">Classroom</a>*@
+            @*</span>*@
+            @*<span class="greylinks">*@
+            @*<a href="#">Emily Spencer</a>*@
+            @*</span>*@
+            @*</p>*@
+
+
+        </header>
+
+        <div class="entry-content text-course">
+            <p>
+                Pour fonctionner, Play framework a besoin de <span class="small-highlight">Java 1.8.</span>  </p>
+            <p>
+                Pour vérifier que nous avons bien la bonne de JDK, ouvrons un terminal et
+                <span class="small-highlight">tapons en ligne de commande:</span>
+            </p>
+            @widgets.course.code(bash) {
+                java -version
+            }
+            <div class="topmargin_20">
+                <p>
+                    Si quelque chose comme ça s’affiche, c’est que <span class="highlight">tout est bon!</span>
+                </p>
+            </div>
+            @widgets.course.code(bash) {
+                java version "1.8.0_121"
+                Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+                Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+            }
+
+            <div class="topmargin_40">
+                <div class="row ">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <button class=" theme_button color inverse" data-toggle="collapse" data-target="#collapsible" aria-expanded="false">
+                            Je n'ai pas la bonne version</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse" id="collapsible">
+                <div class="topmargin_20">
+                    <p>
+                        Sinon, c’est que tu n’as pas de JDK, ou alors pas la bonne version. Il faut donc aller l’installer. <br/>
+                        Toutes les infos se trouvent sur
+                        <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">
+                            le site internet d’Oracle </a>
+                    </p>
+                </div>
+
+                <div class="topmargin_20">
+
+                    @ubuntuContent = {
+                        <p>
+                            Pour une machine ubuntu, voici les lignes de code à taper en ligne de commande
+                            <span class="light">(Ce sont les commandes pour une machine virtuelle vierge)</span>
+                        </p>
+
+                    @widgets.course.code(bash) {
+                        sudo apt -get update
+                        sudo apt -get - y install default - jre
+                        sudo apt -get - y install default - jdk
+                    }
+
+                        <p>
+                            Si après ces commandes, tu n'as toujours pas la bonne version de Java, va faire un tour sur
+                            <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">
+                                le site d’Oracle
+                            </a>
+                            .
+                        </p>
+                    }
+
+                    @macContent = {
+                        <p>démerde toi!!! ahahah</p>
+                    }
+
+                    @widgets.course.os_instructions(List((ubuntu, ubuntuContent), (mac, macContent)), "install-jdk")
+                </div>
+
+            </div>
+
+
+            </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="single-post vertical-item post">
+
+    <div class="item-content">
+
+        <div class="entry-content">
+
+            <header class="entry-header">
+
+                <h1 class="entry-title topmargin_0">
+                    Installer Sbt
+                </h1>
+
+                @*<p class="entry-meta small-text inline-content">*@
+                @*<span>*@
+                @*<a href="#">Classroom</a>*@
+                @*</span>*@
+                @*<span class="greylinks">*@
+                @*<a href="#">Emily Spencer</a>*@
+                @*</span>*@
+                @*</p>*@
+
+
+            </header>
+                <!-- .entry-header -->
+
+            <div class="entry-content">
+
+                <p>Shank doner capicola tenderloin sirloin jerky spare ribs frankfurter ground round beef corned beef. Corned beef shankle pork chop leberkas ball tip boudin. Venison pork loin pancetta, flank landjaeger doner pastrami brisket strip steak salami bresaola cow shoulder meatball jowl. Rump pork chop jowl doner beef ribs spare ribs biltong kielbasa prosciutto tri-tip cupim picanha filet mignon. Doner turkey ribeye, flank pig fatback spare ribs shank. Tail bacon ham hock, turducken bresaola flank swine shankle pastrami kevin boudin leberkas pork chop tongue short loin. Tenderloin shoulder leberkas flank.</p>
+
+                <blockquote class="with_quote text-center">
+                    ouille pork belly spare ribs, leberkas ham meatball filet mignon jerky cupim frankfurter rump ball tip. Sausage tongue strip steak porchetta t-bone salami beef chicken, pork belly shank pastrami.
+                    <div class="item-meta">
+                        <span class="highlight bold text-uppercase">Eula Parker -</span> CEO at Comp inc
+                    </div>
+                </blockquote>
+
+                <p>Biltong frankfurter brisket pastrami ground round kielbasa turkey cupim pig. Jowl spare ribs chicken, pork loin short ribs beef ham cow frankfurter corned beef salami filet mignon meatball pancetta. Filet mignon cow alcatra hamburger prosciutto, ground round pig t-bone drumstick turkey chicken pancetta frankfurter tri-tip. Fatback venison cupim rump.</p>
+                <p>
+                    <img class="alignleft" alt="" src="images/side-image.jpg">
+                    Short loin tongue salami kevin, drumstick tenderloin pork. Picanha tri-tip sirloin, doner bacon filet mignon beef. Frankfurter pork belly leberkas, tri-tip corned beef t-bone tail. Capicola flank hamburger pork. Turducken tongue landjaeger ribeye, frankfurter ball tip flank biltong ground round strip steak prosciutto short loin pork belly beef ribs shankle.
+                </p>
+                <p>Pork belly porchetta short loin shankle cow pork, leberkas sirloin corned beef shoulder. Hamburger pork loin porchetta, cow beef ribs salami biltong ham frankfurter meatloaf turducken venison. Shank frankfurter ball tip porchetta jowl tongue. Jerky meatloaf andouille swine salami, strip steak pork belly porchetta pork.</p>
+
+                <p>Tri-tip filet mignon ground round landjaeger, meatloaf t-bone venison hamburger pork loin pancetta sausage corned beef spare ribs short loin swine. Tail tongue corned beef turducken swine sausage prosciutto. Biltong drumstick pork chop, t-bone pancetta tail jerky beef ribs. Short ribs venison sirloin picanha leberkas cow filet mignon t-bone frankfurter shankle cupim</p>
+
+            </div>
+                <!-- .entry-content -->
+
+        </div>
+            <!-- .item-content -->
+
+</article>
+
+
+
+
+
+
+@widgets.course.code(scala) {
+    case class Coucou()
+    case class Coucou()
+}
+
+@widgets.course.author()
+
+
+

@@ -1,0 +1,10 @@
+@import views.html.helper
+
+@(elements: helper.FieldElements)
+
+<!--<div class="@if(elements.hasErrors) {error}">-->
+    <!--<div class="input">-->
+@elements.input
+<span class="errors">@elements.errors.mkString(", ")</span>
+    <!--</div>-->
+    <!--</div>-->

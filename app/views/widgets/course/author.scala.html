@@ -1,0 +1,39 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import views.html._
+@import enums.ProgLang._
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+
+<article class="author-meta side-item content-padding with_border color2_border">
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="item-media">
+                <img src="@assets.path("images/team/01_square.jpg")" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="item-content">
+                <h3 class="bottommargin_20 entry-title">Francisco Davis</h3>
+
+                <p>Fatback sausage kielbasa drumstick frankfurter salami. Bacon turducken doner cow strip steak pork belly beef ribs rump andouille pork loin sausage pig. Pork andouille ham sausage.</p>
+                <div class="greylinks">
+                    <a href="#" class="social-icon soc-facebook"></a>
+                    <a href="#" class="social-icon soc-twitter"></a>
+                    <a href="#" class="social-icon soc-linkedin"></a>
+                    <a href="#" class="social-icon soc-youtube"></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</article>

@@ -1,0 +1,23 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+<div class="single_blog mr20">
+    <div class="blog_bg blog_bg1">
+        <div class="blog_date">
+            <h4>22 <br>Jan</h4>
+        </div>
+
+    </div>
+    <div class="blog_content">
+        <p class="blog_meta"><i class="icofont icofont-clock-time"></i>08 am - 05 pm</p>
+        <p class="blog_meta"><i class="icofont icofont-social-google-map"></i>New York, US</p>
+        <h4>The geographies of a care based economy</h4>
+        <p>Endeavor bachelor but add eat measure sociable agen formng covered euentem red the examine contented.</p>
+        <a href="course.html"><i class="icofont icofont-long-arrow-right"></i></a>
+    </div>
+</div>
+

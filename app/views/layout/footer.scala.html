@@ -1,0 +1,46 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@(user: Option[models.User] = None)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+<footer class="page_footer ds section_padding_top_75 section_padding_bottom_30">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href="./" class="logo vertical_logo">
+                    @views.html.layout.logo()
+                </a>
+                <ul class="inline-list big-padding menu greylinks menu-style-links topmargin_60">
+                    <li>
+                        <a href="www.facebook.com">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="twitter.com">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="instagram.com">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="plus.google.com">Google</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<section class="ds page_copyright section_padding_15 with_top_border_container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p>eCourse © Copyright 2017. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>

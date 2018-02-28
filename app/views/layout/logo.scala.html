@@ -1,0 +1,17 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+<img src="@assets.path("images/logo.png")" alt="">
+<span class="logo_text">
+    <span class="site-name black">
+        <span class="highlight">Sofware</span>Factory
+    </span>
+    <span class="small-text big-spacing lightgrey">How to built one?</span>
+</span>
+

@@ -1,0 +1,53 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@(user: Option[models.User] = None)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+<header class="page_header header_white toggler_right">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 display_table">
+                <div class="header_left_logo display_table_cell">
+                    <a href="./" class="logo top_logo">
+                        @views.html.layout.logo()
+                    </a>
+                </div>
+
+                <div class="header_mainmenu display_table_cell text-right">
+                        <!-- main nav start -->
+                    <nav class="mainmenu_wrapper">
+                        <ul class="mainmenu nav sf-menu">
+                            <li class="active">
+                                <a href="/">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="">Courses</a>
+                            </li>
+
+                            <li>
+                                <a href="/signIn">Sign In</a>
+                            </li>
+
+                            <li>
+                                <a href="/signUp">Sign Up</a>
+                            </li>
+
+                            <li>
+                                <a href="@controllers.pages.routes.Contact.view">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                        <!-- eof main nav -->
+                        <!-- header toggler -->
+                    <span class="toggle_menu">
+                        <span></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
