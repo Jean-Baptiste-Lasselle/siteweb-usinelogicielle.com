@@ -79,14 +79,14 @@ scalacOptions ++= Seq(
 // scalariFormSettings
 // settings(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 
-resolvers ++= Seq(
-  DefaultMavenRepository,
-  "sonatype.release" at "http://oss.sonatype.org/content/repositories/releases",
-  "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
-)
+// resolvers ++= Seq(
+//   DefaultMavenRepository,
+//   "sonatype.release" at "http://oss.sonatype.org/content/repositories/releases",
+//   "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+// )
 // -
-seq(scalariformSettings: _*)
-seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
+// seq(scalariformSettings: _*)
+// seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 
 // -->> ajout JIBL début
 // scalariformPreferences := scalariformPreferences.value
@@ -95,13 +95,13 @@ seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 //    .setPreference(DanglingCloseParenthesis, Preserve)
 
 
-ScalariformKeys.preferences := FormattingPreferences().setPreference(FormatXml, false)
+// ScalariformKeys.preferences := FormattingPreferences().setPreference(FormatXml, false)
 // -->> ajout JIBL fin
 
-ScalariformKeys.preferences := ScalariformKeys.preferences.value
-  .setPreference(FormatXml, false)
-  .setPreference(DoubleIndentConstructorArguments, false)
-  .setPreference(DanglingCloseParenthesis, Preserve)
+// ScalariformKeys.preferences := ScalariformKeys.preferences.value
+//   .setPreference(FormatXml, false)
+//   .setPreference(DoubleIndentConstructorArguments, false)
+//   .setPreference(DanglingCloseParenthesis, Preserve)
 
 
 includeFilter in (Assets, LessKeys.less) := "*.less"
