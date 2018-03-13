@@ -96,3 +96,4 @@ excludeFilter in (Assets, LessKeys.less) := "_*.less"
 
 
 herokuAppName in Compile := "software-factory"
+enablePlugins(JavaAppPackaging)
