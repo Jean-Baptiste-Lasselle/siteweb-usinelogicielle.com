@@ -71,7 +71,7 @@ scalacOptions ++= Seq(
 // defaultScalariformSettings
 // scalariformSettings
 // scalariformSettings(_*)
-scalariformSettings(true)
+scalariformSettings(_)
 
 // settings(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 
