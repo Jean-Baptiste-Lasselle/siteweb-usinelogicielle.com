@@ -2,6 +2,11 @@
 
 import scalariform.formatter.preferences._
 
+seq(scalariformSettings: _*)
+
+seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
+
+
 name := "software-factory"
 
 version := "1.0.0"
@@ -70,7 +75,8 @@ scalacOptions ++= Seq(
 
 // defaultScalariformSettings
 // scalariformSettings(true)
-scalariformAutoformat((0 == 0))
+// scalariformAutoformat((0 == 0))
+scalariformAutoformat(_*)
 // scalariformSettings(_*)
 // scalariformSettings(false)
 // scalariformAutoformat(true)
@@ -83,6 +89,14 @@ scalariformAutoformat((0 == 0))
 //    .setPreference(AlignSingleLineCaseStatements, true)
 //    .setPreference(DoubleIndentConstructorArguments, true)
 //    .setPreference(DanglingCloseParenthesis, Preserve)
+resolvers ++= Seq(
+  DefaultMavenRepository,
+  "sonatype.release" at "http://oss.sonatype.org/content/repositories/releases",
+  "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+)
+
+ScalariformKeys.preferences := FormattingPreferences().
+  setPreference(FormatXml, false)
 // -->> ajout JIBL fin
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
