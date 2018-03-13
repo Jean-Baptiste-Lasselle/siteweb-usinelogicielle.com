@@ -68,8 +68,8 @@ scalacOptions ++= Seq(
 // Scalariform settings
 //********************************************************
 
-// defaultScalariformSettings
-scalariformSettings _
+defaultScalariformSettings
+// scalariformSettings _
 // scalariformSettings(_*)
 // scalariformSettings(false)
 // scalariformAutoformat(true)
@@ -78,10 +78,10 @@ scalariformSettings _
 
 
 // -->> ajout JIBL début
-scalariformPreferences := scalariformPreferences.value
-    .setPreference(AlignSingleLineCaseStatements, true)
-    .setPreference(DoubleIndentConstructorArguments, true)
-    .setPreference(DanglingCloseParenthesis, Preserve)
+// scalariformPreferences := scalariformPreferences.value
+//    .setPreference(AlignSingleLineCaseStatements, true)
+//    .setPreference(DoubleIndentConstructorArguments, true)
+//    .setPreference(DanglingCloseParenthesis, Preserve)
 // -->> ajout JIBL fin
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
