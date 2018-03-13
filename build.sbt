@@ -2,10 +2,6 @@
 
 import scalariform.formatter.preferences._
 
-seq(scalariformSettings: _*)
-
-seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
-
 
 name := "software-factory"
 
@@ -76,13 +72,14 @@ scalacOptions ++= Seq(
 // defaultScalariformSettings
 // scalariformSettings(true)
 // scalariformAutoformat((0 == 0))
-scalariformAutoformat(_*)
+// scalariformAutoformat(_*)
 // scalariformSettings(_*)
 // scalariformSettings(false)
 // scalariformAutoformat(true)
 // scalariFormSettings
 // settings(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
-
+seq(scalariformSettings: _*)
+seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 
 // -->> ajout JIBL début
 // scalariformPreferences := scalariformPreferences.value
