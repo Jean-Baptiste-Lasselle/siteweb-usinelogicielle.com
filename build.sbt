@@ -68,9 +68,9 @@ scalacOptions ++= Seq(
 // Scalariform settings
 //********************************************************
 
-defaultScalariformSettings
+// defaultScalariformSettings
 // scalariformSettings
-// scalariformSettings(_)
+scalariformSettings(_*)
 // settings(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
