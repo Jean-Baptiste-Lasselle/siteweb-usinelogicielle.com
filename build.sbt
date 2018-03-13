@@ -78,6 +78,13 @@ scalacOptions ++= Seq(
 // scalariformAutoformat(true)
 // scalariFormSettings
 // settings(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
+
+resolvers ++= Seq(
+  DefaultMavenRepository,
+  "sonatype.release" at "http://oss.sonatype.org/content/repositories/releases",
+  "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+)
+// -
 seq(scalariformSettings: _*)
 seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 
@@ -86,14 +93,9 @@ seq(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 //    .setPreference(AlignSingleLineCaseStatements, true)
 //    .setPreference(DoubleIndentConstructorArguments, true)
 //    .setPreference(DanglingCloseParenthesis, Preserve)
-resolvers ++= Seq(
-  DefaultMavenRepository,
-  "sonatype.release" at "http://oss.sonatype.org/content/repositories/releases",
-  "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
-)
 
-ScalariformKeys.preferences := FormattingPreferences().
-  setPreference(FormatXml, false)
+
+ScalariformKeys.preferences := FormattingPreferences().setPreference(FormatXml, false)
 // -->> ajout JIBL fin
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
