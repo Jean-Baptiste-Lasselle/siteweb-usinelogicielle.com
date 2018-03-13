@@ -1,4 +1,4 @@
-// import com.typesafe.sbt.SbtScalariform._
+//  import com.typesafe.sbt.SbtScalariform._
 
 import scalariform.formatter.preferences._
 
@@ -70,7 +70,8 @@ scalacOptions ++= Seq(
 
 // defaultScalariformSettings
 // scalariformSettings
-scalariformSettings(_)
+// scalariformSettings(_)
+settings(com.typesafe.packager.PackagerPlugin.packagerSettings:_*)
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(FormatXml, false)
