@@ -68,7 +68,8 @@ scalacOptions ++= Seq(
 // Scalariform settings
 //********************************************************
 
-defaultScalariformSettings
+// defaultScalariformSettings
+scalariformSettings
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(FormatXml, false)
