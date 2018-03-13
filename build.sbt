@@ -69,7 +69,7 @@ scalacOptions ++= Seq(
 //********************************************************
 
 // defaultScalariformSettings
-scalariformSettings
+scalariformSettings _
 // scalariformSettings(_*)
 // scalariformSettings(false)
 // scalariformAutoformat(true)
